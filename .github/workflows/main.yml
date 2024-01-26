@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hydephp/action@master
-        #with:
-        #  key: 'Value'
+      - uses: hydephp/action@config-array
+        with:
+          deploy-to: "artifact"
+          config: |
+            # Enter key-value Yaml here:
+            name: Example
+            url: {{ github.deployment.url }}
