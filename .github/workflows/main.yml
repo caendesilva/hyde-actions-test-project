@@ -11,4 +11,4 @@ jobs:
           config: |
             # Enter key-value Yaml here:
             name: Example
-            sha: {{ github.sha }}
+            sha: ${{ github.sha }}
